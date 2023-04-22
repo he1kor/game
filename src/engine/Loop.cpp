@@ -20,7 +20,7 @@ void Loop::launch()
         quit = event_handler.handle();
         render.renderFrame();
         Uint64 end_counter = SDL_GetPerformanceCounter();
-        float elapsed_seconds = (end_counter - start_counter) / (float)SDL_GetPerformanceFrequency();
+        float elapsed_seconds = float(end_counter - start_counter) / (float)SDL_GetPerformanceFrequency();
         SDL_Delay(int (1000 * (std::max(0.0f,(BASIC_DELAY - elapsed_seconds)))));
         if (quit) break;
     }

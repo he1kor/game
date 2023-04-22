@@ -17,7 +17,7 @@ find_package(GLEW REQUIRED)
 find_package(OpenGL REQUIRED)
 include_directories(${SDL2_INCLUDE_DIR})
 
-add_executable(game src/main.cpp src/window/Window.cpp src/window/Window.h src/engine/Loop.cpp src/engine/Loop.h src/engine/EventHandler.cpp src/engine/EventHandler.h src/graphic/Render.cpp src/graphic/Render.h)
+add_executable(game src/main.cpp src/window/Window.cpp src/window/Window.h src/engine/Loop.cpp src/engine/Loop.h src/engine/EventHandler.cpp src/engine/EventHandler.h src/graphic/Render.cpp src/graphic/Render.h src/game/entity/Entity.cpp src/game/entity/Entity.h)
 
 
 target_link_libraries(game

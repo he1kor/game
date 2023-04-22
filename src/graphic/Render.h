@@ -7,7 +7,7 @@
 class Render {
 
     public:
-        Render(Window *window);
+        explicit Render(Window *window);
         void renderFrame();
     private:
         Window *window;
