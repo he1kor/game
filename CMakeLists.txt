@@ -3,15 +3,12 @@ project(game)
 set(CMAKE_CXX_STANDARD 23)
 
 set(CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake/modules)
-set(SDL2_PATH libs/SDL2-2.26.4/x86_64-w64-mingw32)
-set(CMAKE_EXE_LINKER_FLAGS "-static")
-
-
 set(GLEW_VERBOSE ON)
-set(GLEW_USE_STATIC_LIBS ON)
 
+list(APPEND CMAKE_PREFIX_PATH "lib/glew-2.2.0")
+list(APPEND CMAKE_LIBRARY_PATH "lib/glew-2.2.0/lib/Release/x64")
+set(SDL2_PATH lib/sdl-2.26.5/i686-w64-mingw32)
 
-list(APPEND CMAKE_PREFIX_PATH "glew")
 find_package(SDL2 REQUIRED)
 find_package(GLEW REQUIRED)
 find_package(OpenGL REQUIRED)
